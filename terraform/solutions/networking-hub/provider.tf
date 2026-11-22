@@ -11,7 +11,6 @@ terraform {
 }
 
 provider "azurerm" {
-    resource_provider_registrations = "none"
     features {}
     storage_use_azuread = true
 }
