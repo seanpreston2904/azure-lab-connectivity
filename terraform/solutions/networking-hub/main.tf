@@ -23,8 +23,8 @@ resource "azurerm_virtual_network_peering" "hub_to_management" {
     for_each = local.vnet_peerings
 
     name                         = each.value.name
-    resource_group_name          = each.value.resource_group_name
-    virtual_network_name         = each.value.virtual_network_name
+    resource_group_name          = azurerm_resource_group.rg_conectivity_hub_aue.name
+    virtual_network_name         = azurerm_virtual_network.vnet_connectivity_hub_aue.name
     remote_virtual_network_id    = each.value.remote_virtual_network_id
     allow_virtual_network_access = true
     allow_forwarded_traffic      = true
