@@ -1,0 +1,5 @@
+temp_tf_state/
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
